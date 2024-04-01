@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Pizza Delivery</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <form id="registrationForm" aria-labelledby="formHeading">
+      <h2 id="formHeading">Register for Pizza Delivery!</h2>
+
+      <label for="name">Name (required):</label>
+      <input type="text" id="name" name="name" required minlength="2" aria-required="true">
+
+      <label for="yearOfBirth">Year of Birth (required):</label>
+      <input type="number" id="yearOfBirth" name="yearOfBirth" required min="1901" max="2099" aria-required="true">
+
+      <div>
+         <input type="checkbox" id="liveInUS" name="liveInUS" aria-describedby="usCheckHelp">
+         <label for="liveInUS">Do you live in the United States? (Check for yes)</label>
+      </div>
+
+      <label for="zipcode">Zipcode:</label>
+      <input type="text" id="zipcode" name="zipcode" aria-disabled="false">
+
+      <label for="password">Password (required):</label>
+      <input type="password" id="password" name="password" required minlength="8" aria-required="true">
+
+      <fieldset aria-describedby="pizzaPreferenceHelp">
+         <legend>Preferred Type of Pizza (Select one):</legend>
+         <label><input type="radio" name="pizzaPreference" value="With pineapple" required aria-required="true"> With
+            pineapple</label>
+         <label><input type="radio" name="pizzaPreference" value="Without pineapple" required aria-required="true">
+            Without pineapple</label>
+         <label><input type="radio" name="pizzaPreference" value="I do not like pizza" required aria-required="true"> I
+            do not like pizza</label>
+         <span id="pizzaPreferenceHelp" class="helpText">Please select your pizza preference.</span>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+      <div id="errorMessages" role="alert"></div>
+   </form>
+
+   <script src="script.js"></script>
+</body>
+
+</html>
